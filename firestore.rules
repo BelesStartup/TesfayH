@@ -1,0 +1,15 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow public read access to all documents
+    match /{document=**} {
+      allow read: if true;
+    }
+    
+    // Allow write access only to the contact form collection
+    match /contactMessages/{messageId} {
+      allow create: if true;  // Allow anyone to create contact messages
+      allow update, delete: if false;  // Prevent updates and deletes
+    }
+  }
+} 
