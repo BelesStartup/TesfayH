@@ -113,11 +113,31 @@ export default function Contact() {
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Contact Information</h2>
-            <div className="space-y-4 text-lg text-gray-700 dark:text-gray-300">
-                <p><strong>Email:</strong> tesfay.hagos1421@gmail.com</p>
-                <p><strong>Phone:</strong> +251 915 297 421</p>
-                <p><strong>Location:</strong> Addis Ababa, Ethiopia</p>
-                <p>I'm always open to new opportunities and collaborations.</p>
+            <div className="space-y-6 text-lg text-gray-700 dark:text-gray-300">
+                <div className="bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-900/20 dark:to-purple-900/20 p-4 rounded-lg">
+                  <p className="font-bold text-indigo-600 dark:text-indigo-400 mb-2">📧 Email Response</p>
+                  <p><strong>Primary:</strong> tesfay.hagos1421@gmail.com</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Typically responds within 2-4 hours</p>
+                </div>
+                
+                <div className="bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 p-4 rounded-lg">
+                  <p className="font-bold text-green-600 dark:text-green-400 mb-2">📱 Direct Contact</p>
+                  <p><strong>Phone:</strong> +251 915 297 421</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Available Mon-Fri, 9 AM - 6 PM (EAT)</p>
+                </div>
+                
+                <div className="bg-gradient-to-r from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 p-4 rounded-lg">
+                  <p className="font-bold text-orange-600 dark:text-orange-400 mb-2">🌍 Location & Availability</p>
+                  <p><strong>Base:</strong> Addis Ababa, Ethiopia</p>
+                  <p><strong>Timezone:</strong> UTC+3 (EAT)</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Available for remote work globally</p>
+                </div>
+                
+                <div className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 p-4 rounded-lg">
+                  <p className="font-bold text-purple-600 dark:text-purple-400 mb-2">🚀 Project Availability</p>
+                  <p className="text-sm">Currently accepting new projects</p>
+                  <p className="text-sm">Specializing in enterprise-grade backend solutions</p>
+                </div>
             </div>
             <div className="mt-6 flex space-x-6">
               <a href="#" className="text-gray-500 hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-200">

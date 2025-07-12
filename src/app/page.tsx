@@ -67,13 +67,13 @@ const Home = () => {
               </motion.div>
             </motion.div>
             
-            <motion.div 
+            	<motion.div 
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="relative mt-12 lg:mt-0"
+              className="relative mt-12 lg:mt-0 flex justify-center items-center"
             >
-              <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-2xl">
+              <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl transform transition-all duration-300 hover:scale-105">
                 <Image
                   src="/images/photo.jpg"
                   alt="Tesfay Hagos"
@@ -81,11 +81,8 @@ const Home = () => {
                   className="object-cover"
                 />
               </div>
-              <div className="absolute -bottom-4 -left-4 bg-yellow-400 text-gray-900 px-6 py-2 rounded-full font-bold shadow-lg">
-                Backend Expert
-              </div>
-              <div className="absolute top-0 right-0 bg-black text-white px-6 py-2 rounded-full font-bold shadow-lg transform translate-x-1/4 -translate-y-1/4">
-                Golang Specialist
+              <div className="absolute -bottom-6 -left-6 bg-yellow-400 text-gray-900 px-6 py-2 rounded-full font-bold shadow-lg transform hover:translate-y-1">
+                Software Developer
               </div>
             </motion.div>
           </div>
@@ -99,7 +96,7 @@ const Home = () => {
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               transition={{ duration: 0.6 }}
               className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white"
             >
@@ -108,7 +105,7 @@ const Home = () => {
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="mt-4 max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400"
             >
@@ -159,7 +156,7 @@ const Home = () => {
                 key={skill.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 shadow-lg transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
               >
@@ -183,13 +180,99 @@ const Home = () => {
             <motion.div 
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               transition={{ duration: 0.8 }}
               className="flex-1"
             >
               <div className="relative">
-                <div className="bg-gray-200 border-2 border-dashed rounded-xl w-full h-96" />
-                <div className="absolute -bottom-6 -right-6 bg-indigo-600 text-white px-6 py-3 rounded-lg font-bold shadow-xl">
+                <div className="bg-gradient-to-br from-indigo-600 via-purple-600 to-blue-700 rounded-2xl p-8 text-white shadow-2xl">
+                  <div className="grid grid-cols-2 gap-6">
+                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center">
+                          <TbBrandGolang className="h-6 w-6 text-gray-900" />
+                        </div>
+                        <div>
+                          <h3 className="font-bold text-lg">Golang Expert</h3>
+                          <p className="text-sm opacity-90">High Performance</p>
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="flex justify-between text-sm">
+                          <span>API Development</span>
+                          <span>95%</span>
+                        </div>
+                        <div className="w-full bg-white/20 rounded-full h-2">
+                          <div className="bg-yellow-400 h-2 rounded-full" style={{width: '95%'}}></div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-10 h-10 bg-green-400 rounded-full flex items-center justify-center">
+                          <TbDatabase className="h-6 w-6 text-gray-900" />
+                        </div>
+                        <div>
+                          <h3 className="font-bold text-lg">Database</h3>
+                          <p className="text-sm opacity-90">Optimization</p>
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="flex justify-between text-sm">
+                          <span>PostgreSQL</span>
+                          <span>90%</span>
+                        </div>
+                        <div className="w-full bg-white/20 rounded-full h-2">
+                          <div className="bg-green-400 h-2 rounded-full" style={{width: '90%'}}></div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center">
+                          <TbCloud className="h-6 w-6 text-gray-900" />
+                        </div>
+                        <div>
+                          <h3 className="font-bold text-lg">Cloud & DevOps</h3>
+                          <p className="text-sm opacity-90">Scalable Solutions</p>
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="flex justify-between text-sm">
+                          <span>AWS & Docker</span>
+                          <span>85%</span>
+                        </div>
+                        <div className="w-full bg-white/20 rounded-full h-2">
+                          <div className="bg-blue-400 h-2 rounded-full" style={{width: '85%'}}></div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-10 h-10 bg-purple-400 rounded-full flex items-center justify-center">
+                          <TbCoin className="h-6 w-6 text-gray-900" />
+                        </div>
+                        <div>
+                          <h3 className="font-bold text-lg">Blockchain</h3>
+                          <p className="text-sm opacity-90">Web3 Integration</p>
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="flex justify-between text-sm">
+                          <span>Smart Contracts</span>
+                          <span>80%</span>
+                        </div>
+                        <div className="w-full bg-white/20 rounded-full h-2">
+                          <div className="bg-purple-400 h-2 rounded-full" style={{width: '80%'}}></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-6 py-3 rounded-lg font-bold shadow-xl">
                   <div className="text-sm">5+ years experience</div>
                   <div className="text-xl">Backend Development</div>
                 </div>
@@ -199,7 +282,7 @@ const Home = () => {
             <motion.div 
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="flex-1"
             >
@@ -249,6 +332,106 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Achievements & Certifications */}
+      <section className="py-20 bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.6 }}
+              className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white"
+            >
+              Achievements & <span className="text-indigo-600 dark:text-indigo-400">Certifications</span>
+            </motion.h2>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="mt-4 max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400"
+            >
+              Professional milestones and continuous learning journey
+            </motion.p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Senior Backend Developer",
+                organization: "Multiple International Companies",
+                year: "2019-Present",
+                description: "Led backend development for enterprise-scale applications",
+                icon: "🏆",
+                color: "bg-yellow-500"
+              },
+              {
+                title: "Golang Expertise",
+                organization: "Self-Directed Learning",
+                year: "2020-Present",
+                description: "Mastered Go programming with focus on microservices",
+                icon: "🔧",
+                color: "bg-blue-500"
+              },
+              {
+                title: "Cloud Architecture",
+                organization: "AWS & Azure",
+                year: "2021-Present",
+                description: "Designed and implemented scalable cloud solutions",
+                icon: "☁️",
+                color: "bg-green-500"
+              },
+              {
+                title: "Blockchain Development",
+                organization: "Web3 Projects",
+                year: "2022-Present",
+                description: "Built blockchain indexers and smart contract integrations",
+                icon: "⛓️",
+                color: "bg-purple-500"
+              },
+              {
+                title: "DevOps Implementation",
+                organization: "CI/CD Pipeline Expert",
+                year: "2020-Present",
+                description: "Implemented automated deployment and monitoring systems",
+                icon: "🚀",
+                color: "bg-red-500"
+              },
+              {
+                title: "International Recognition",
+                organization: "Global Client Base",
+                year: "2019-Present",
+                description: "Successfully delivered projects for clients across 3 continents",
+                icon: "🌍",
+                color: "bg-indigo-500"
+              }
+            ].map((achievement, index) => (
+              <motion.div
+                key={achievement.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-shadow duration-300"
+              >
+                <div className="flex items-center mb-4">
+                  <div className={`${achievement.color} w-12 h-12 rounded-full flex items-center justify-center text-white text-xl font-bold mr-4`}>
+                    {achievement.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-900 dark:text-white">{achievement.title}</h3>
+                    <p className="text-sm text-indigo-600 dark:text-indigo-400">{achievement.year}</p>
+                  </div>
+                </div>
+                <p className="text-gray-600 dark:text-gray-400 mb-2">{achievement.organization}</p>
+                <p className="text-gray-700 dark:text-gray-300 text-sm">{achievement.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials */}
       <section className="py-20 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -256,7 +439,7 @@ const Home = () => {
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               transition={{ duration: 0.6 }}
               className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white"
             >
@@ -265,7 +448,7 @@ const Home = () => {
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="mt-4 max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400"
             >
@@ -298,7 +481,7 @@ const Home = () => {
                 key={testimonial.name}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700"
               >
@@ -321,7 +504,7 @@ const Home = () => {
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               transition={{ duration: 0.6 }}
               className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white"
             >
@@ -329,7 +512,7 @@ const Home = () => {
             </motion.h2>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
             {[
               {
                 name: 'Sewasew Multimedia',
@@ -347,6 +530,11 @@ const Home = () => {
                 location: 'USA'
               },
               {
+                name: 'Fintech Investment PLC',
+                url: 'https://fintechinvestment.net/',
+                location: 'Ethiopia'
+              },
+              {
                 name: 'AASTU',
                 url: 'https://www.aastu.edu.et/',
                 location: 'Ethiopia'
@@ -356,7 +544,7 @@ const Home = () => {
                 key={company.name}
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -10 }}
                 className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg flex flex-col items-center justify-center text-center border border-gray-200 dark:border-gray-700"
@@ -365,7 +553,8 @@ const Home = () => {
                   <Image
                     src={`/images/${company.name === 'Sewasew Multimedia' ? 'sewasew.png' : 
                            company.name === 'Kwil' ? 'kwil.jpeg' :
-                           company.name === '2F Capital LLC' ? '2f.png' : 'aastu.png'}`}
+                           company.name === '2F Capital LLC' ? '2f.png' :
+                           company.name === 'Fintech Investment PLC' ? 'fintech.jpeg' : 'aastu.png'}`}
                     alt={`${company.name} logo`}
                     fill
                     className="object-contain"
@@ -393,7 +582,7 @@ const Home = () => {
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.6 }}
             className="text-3xl md:text-4xl font-bold mb-6"
           >
@@ -403,7 +592,7 @@ const Home = () => {
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl max-w-2xl mx-auto mb-10 opacity-90"
           >
@@ -413,7 +602,7 @@ const Home = () => {
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="flex flex-col sm:flex-row justify-center gap-4"
           >
