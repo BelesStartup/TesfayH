@@ -123,11 +123,11 @@ export default function Projects() {
                   <p className="text-gray-600 dark:text-gray-400 text-base mb-4 line-clamp-3">{project.description}</p>
                   
                   {/* Key Metrics */}
-                  <div className="grid grid-cols-3 gap-4 mb-6 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-6 p-3 sm:p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
                     {Object.entries(project.metrics).map(([key, value]) => (
                       <div key={key} className="text-center">
-                        <div className="text-lg font-bold text-indigo-600 dark:text-indigo-400">{value}</div>
-                        <div className="text-xs text-gray-500 dark:text-gray-400 capitalize">{key}</div>
+                        <div className="text-base sm:text-lg font-bold text-indigo-600 dark:text-indigo-400">{value}</div>
+                        <div className="text-xs sm:text-xs text-gray-500 dark:text-gray-400 capitalize">{key}</div>
                       </div>
                     ))}
                   </div>
@@ -143,21 +143,21 @@ export default function Projects() {
                     ))}
                   </div>
                   
-                  <div className="flex justify-between items-center">
+                  <div className="flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-0">
                     <Link
                       href={`/projects/${project.slug}`}
-                      className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg hover:from-indigo-700 hover:to-purple-700 font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg"
+                      className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-4 py-2 sm:px-6 sm:py-3 rounded-lg hover:from-indigo-700 hover:to-purple-700 font-semibold transition-all duration-200 transform hover:scale-105 shadow-lg text-sm sm:text-base w-full sm:w-auto text-center"
                     >
                       View Details
                     </Link>
-                    <div className="flex space-x-2">
-                      <div className="w-8 h-8 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center">
-                        <svg className="w-4 h-4 text-green-600 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                    <div className="flex space-x-2 justify-center sm:justify-start">
+                      <div className="w-6 h-6 sm:w-8 sm:h-8 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center">
+                        <svg className="w-3 h-3 sm:w-4 sm:h-4 text-green-600 dark:text-green-400" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
                       </div>
-                      <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center">
-                        <svg className="w-4 h-4 text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 20 20">
+                      <div className="w-6 h-6 sm:w-8 sm:h-8 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center">
+                        <svg className="w-3 h-3 sm:w-4 sm:h-4 text-blue-600 dark:text-blue-400" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M3 4a1 1 0 011-1h4a1 1 0 010 2H6.414l2.293 2.293a1 1 0 01-1.414 1.414L5 6.414V8a1 1 0 01-2 0V4zm9 1a1 1 0 010-2h4a1 1 0 011 1v4a1 1 0 01-2 0V6.414l-2.293 2.293a1 1 0 11-1.414-1.414L13.586 5H12z" clipRule="evenodd" />
                         </svg>
                       </div>

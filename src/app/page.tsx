@@ -14,7 +14,7 @@ const Home = () => {
         <div className="absolute inset-0 bg-[url('/svg/grid.svg')] bg-repeat opacity-10"></div>
         <div className="absolute top-0 right-0 w-72 h-72 bg-indigo-500 rounded-full -translate-y-1/2 translate-x-1/2 opacity-20 blur-3xl"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex flex-col lg:flex-row items-center gap-12">
+          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -34,7 +34,7 @@ const Home = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="mt-6 max-w-2xl mx-auto lg:mx-0 text-xl md:text-2xl font-light opacity-90"
+                className="mt-4 sm:mt-6 max-w-2xl mx-auto lg:mx-0 text-lg sm:text-xl md:text-2xl font-light opacity-90"
               >
                 Senior Backend Developer crafting high-performance, scalable solutions for global enterprises
               </motion.p>
@@ -43,11 +43,11 @@ const Home = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
-                className="mt-10 flex flex-col sm:flex-row justify-center lg:justify-start gap-4"
+                className="mt-8 sm:mt-10 flex flex-col sm:flex-row justify-center lg:justify-start gap-3 sm:gap-4"
               >
                 <Link
                   href="/contact"
-                  className="px-8 py-4 bg-white text-indigo-700 font-medium rounded-full shadow-lg transform transition-all duration-300 hover:scale-105 hover:bg-gray-50 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white flex items-center justify-center"
+                  className="px-6 py-3 sm:px-8 sm:py-4 bg-white text-indigo-700 font-medium rounded-full shadow-lg transform transition-all duration-300 hover:scale-105 hover:bg-gray-50 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white flex items-center justify-center text-sm sm:text-base"
                 >
                   Get in Touch
                   <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -57,7 +57,7 @@ const Home = () => {
                 
                 <Link
                   href="/projects"
-                  className="px-8 py-4 border-2 border-white text-white font-medium rounded-full shadow-lg transform transition-all duration-300 hover:scale-105 hover:bg-white/10 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white flex items-center justify-center"
+                  className="px-6 py-3 sm:px-8 sm:py-4 border-2 border-white text-white font-medium rounded-full shadow-lg transform transition-all duration-300 hover:scale-105 hover:bg-white/10 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white flex items-center justify-center text-sm sm:text-base"
                 >
                   View Projects
                   <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -73,7 +73,7 @@ const Home = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="relative mt-12 lg:mt-0 flex justify-center items-center"
             >
-              <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl transform transition-all duration-300 hover:scale-105">
+              <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl transform transition-all duration-300 hover:scale-105">
                 <Image
                   src="/images/photo.jpg"
                   alt="Tesfay Hagos"
@@ -81,7 +81,7 @@ const Home = () => {
                   className="object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -left-6 bg-yellow-400 text-gray-900 px-6 py-2 rounded-full font-bold shadow-lg transform hover:translate-y-1">
+              <div className="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 bg-yellow-400 text-gray-900 px-3 py-1 sm:px-6 sm:py-2 rounded-full font-bold shadow-lg transform hover:translate-y-1 text-sm sm:text-base">
                 Software Developer
               </div>
             </motion.div>

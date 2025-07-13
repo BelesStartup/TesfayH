@@ -209,10 +209,10 @@ export default function ProjectDetail({ params }: ProjectDetailProps) {
               </span>
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
               {project.title}
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl opacity-90 max-w-3xl mx-auto leading-relaxed">
               {project.description}
             </p>
           </MotionDiv>
@@ -247,13 +247,13 @@ export default function ProjectDetail({ params }: ProjectDetailProps) {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="mb-16"
         >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {Object.entries(project.metrics).map(([key, value]) => (
-              <div key={key} className="bg-white dark:bg-gray-800 rounded-xl p-6 text-center shadow-lg border border-gray-200 dark:border-gray-700">
-                <div className="text-2xl md:text-3xl font-bold text-indigo-600 dark:text-indigo-400 mb-2">
+              <div key={key} className="bg-white dark:bg-gray-800 rounded-xl p-4 sm:p-6 text-center shadow-lg border border-gray-200 dark:border-gray-700">
+                <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-indigo-600 dark:text-indigo-400 mb-2">
                   {value}
                 </div>
-                <div className="text-sm text-gray-600 dark:text-gray-400 capitalize font-medium">
+                <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 capitalize font-medium">
                   {key}
                 </div>
               </div>
@@ -277,7 +277,7 @@ export default function ProjectDetail({ params }: ProjectDetailProps) {
                 {project.longDescription}
               </p>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Architecture</h4>
                   <p className="text-gray-600 dark:text-gray-400">{project.architecture}</p>
@@ -305,11 +305,11 @@ export default function ProjectDetail({ params }: ProjectDetailProps) {
               className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700"
             >
               <h2 className="text-3xl font-bold text-indigo-600 dark:text-indigo-400 mb-6">Key Features</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 {project.features.map((feature, index) => (
                   <div key={index} className="flex items-center space-x-3 p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
-                    <div className="w-2 h-2 bg-indigo-500 rounded-full"></div>
-                    <span className="text-gray-700 dark:text-gray-300">{feature}</span>
+                    <div className="w-2 h-2 bg-indigo-500 rounded-full flex-shrink-0"></div>
+                    <span className="text-gray-700 dark:text-gray-300 text-sm sm:text-base">{feature}</span>
                   </div>
                 ))}
               </div>
@@ -323,11 +323,11 @@ export default function ProjectDetail({ params }: ProjectDetailProps) {
               className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700"
             >
               <h2 className="text-3xl font-bold text-indigo-600 dark:text-indigo-400 mb-6">Technologies Used</h2>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-2 sm:gap-3">
                 {project.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg hover:shadow-xl transition-shadow duration-200"
+                    className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-3 py-1 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium shadow-lg hover:shadow-xl transition-shadow duration-200"
                   >
                     {tech}
                   </span>

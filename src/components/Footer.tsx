@@ -5,12 +5,12 @@ import Link from 'next/link';
 const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
           {/* Contact Information */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact</h3>
-            <div className="space-y-3">
+            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Contact</h3>
+            <div className="space-y-2 sm:space-y-3">
               <a 
                 href="mailto:tesfay.hagos1421@gmail.com" 
                 className="flex items-center text-gray-300 hover:text-white transition-colors duration-200"
@@ -34,8 +34,8 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-3">
+            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Quick Links</h3>
+            <ul className="space-y-2 sm:space-y-3">
               <li>
                 <Link href="/" className="text-gray-300 hover:text-white transition-colors duration-200">
                   Home
@@ -56,8 +56,8 @@ const Footer = () => {
 
           {/* Social Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Connect</h3>
-            <div className="flex space-x-4">
+            <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Connect</h3>
+            <div className="flex space-x-3 sm:space-x-4 justify-center sm:justify-start">
               <a 
                 href="https://github.com/Tesfay-Hagos" 
                 target="_blank" 
@@ -65,7 +65,7 @@ const Footer = () => {
                 className="text-gray-300 hover:text-white transition-colors duration-200"
               >
                 <span className="sr-only">GitHub</span>
-                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <svg className="h-5 w-5 sm:h-6 sm:w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.83 9.504.5.092.647-.233.647-.577 0-.285-.01-1.04-.015-2.04-2.78.6-3.37-1.358-3.37-1.358-.454-1.166-1.11-1.474-1.11-1.474-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.529 2.341 1.084 2.91.828.092-.647.35-1.084.636-1.332-2.22-.253-4.555-1.113-4.555-4.93 0-1.09.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.025A9.458 9.458 0 0112 6.13c.85.003 1.7.115 2.5.324 1.902-1.294 2.74-1.025 2.74-1.025.546 1.379.202 2.398.099 2.65.64.7 1.028 1.598 1.028 2.688 0 3.822-2.339 4.67-4.562 4.922.357.307.676.915.676 1.855 0 1.332-.012 2.41-.012 2.72 0 .345.24.678.652.575C19.158 20.25 22 16.58 22 12.017 22 6.484 17.522 2 12 2Z" clipRule="evenodd" />
                 </svg>
               </a>
@@ -76,7 +76,7 @@ const Footer = () => {
                 className="text-gray-300 hover:text-white transition-colors duration-200"
               >
                 <span className="sr-only">LinkedIn</span>
-                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <svg className="h-5 w-5 sm:h-6 sm:w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path fillRule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clipRule="evenodd" />
                 </svg>
               </a>
@@ -87,7 +87,7 @@ const Footer = () => {
                 className="text-gray-300 hover:text-white transition-colors duration-200"
               >
                 <span className="sr-only">Medium</span>
-                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <svg className="h-5 w-5 sm:h-6 sm:w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zm7.42 0c0 .38-.16.85-.44 1.09l-5.3 5.4c-.15.15-.3.2-.4.2-.1 0-.25-.05-.4-.2l-5.3-5.4c-.28-.24-.44-.7-.44-1.09 0-.38.16-.85.44-1.09l5.3-5.4c.15-.15.3-.2.4-.2.1 0 .25.05.4.2l5.3 5.4c.28.24.44.7.44 1.09z"/>
                 </svg>
               </a>
@@ -98,7 +98,7 @@ const Footer = () => {
                 className="text-gray-300 hover:text-white transition-colors duration-200"
               >
                 <span className="sr-only">GitLab</span>
-                <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <svg className="h-5 w-5 sm:h-6 sm:w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M22.65 14.39L12 22.13 1.35 14.39a.84.84 0 0 1-.3-.94l1.22-3.78 2.44-7.51A.42.42 0 0 1 4.82 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.49h8.1l2.44-7.51A.42.42 0 0 1 18.6 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.51L23 13.45a.84.84 0 0 1-.35.94z"/>
                 </svg>
               </a>
@@ -106,8 +106,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Tesfay Hagos. All rights reserved.</p>
+        <div className="mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-gray-800 text-center text-gray-400">
+          <p className="text-sm sm:text-base">&copy; {new Date().getFullYear()} Tesfay Hagos. All rights reserved.</p>
         </div>
       </div>
     </footer>
